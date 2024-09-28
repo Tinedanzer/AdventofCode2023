@@ -35,7 +35,6 @@ def letTheFunBegin(input):
         for character in cleanedString:
            if counter == 1:
                 number2= character
-                # print(cleanedString[-1])
                 if cleanedString[-1] == character:
                     finalSum += int(number1)*10 + int(number2)
                     print(int(number1)*10 + int(number2))
