@@ -23,8 +23,6 @@ from get_input import get_input
 
 # getting our data
 input_data = get_input("input.txt")
-# input_data = re.findall("\d", input_data)
-# print(input_data)
 
 def letTheFunBegin(input):
     number1 = ''
@@ -38,20 +36,21 @@ def letTheFunBegin(input):
            if counter == 1:
                 number2= character
                 # print(cleanedString[-1])
-                # print(number2)
                 if cleanedString[-1] == character:
                     finalSum += int(number1)*10 + int(number2)
                     print(int(number1)*10 + int(number2))
                     break
            if counter == 0 :
                 number1=character
+                # counter is used to move on to the 'digits' number
                 counter += 1
+                # checks to see if this is the only number in the string, and even checks if the last number is the same number. 2 for 1 !
                 if cleanedString[-1] == character:
                     number2= character
                     finalSum += int(number1)*10 + int(number2)
                     print(int(number1)*10 + int(number2))
                     break
-                # print(number1)
+        # resetting the variables.
         number1 = ''
         counter= 0
         number2= ''
